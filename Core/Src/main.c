@@ -109,6 +109,17 @@ int main(void)
 	  			HAL_Delay(100);
 	  		}
   }
+
+int durum = HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0);
+    if(durum == 1)
+    {
+    	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,GPIO_PIN_SET);
+    }
+    else
+    {
+    	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,GPIO_PIN_RESET);
+    }
+    
   /* USER CODE END 3 */
 }
 
